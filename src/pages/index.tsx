@@ -73,7 +73,13 @@ export default function LandingPage() {
   );
 }
 
-function FeatureCard({ icon, title, description }: any) {
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+function FeatureCard({ icon, title, description }: FeatureCardProps) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md">
       <div className="flex justify-center mb-4">{icon}</div>
